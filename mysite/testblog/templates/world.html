@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    {% for a in whatsup %}
+    <div>
+        <p>published:{{ a.published_date }}</p>
+        <h1><a href="{% url 'def' wow=a.pk %}">{{ a.title }}</a></h1>
+        <p>{{ a.text|linebreaksbr }}</p><br><br>
+        
+    </div>
+    {% endfor %}
+
+    {% for a in howsup %}
+    <div>
+        <p>title:{{ a.title }}</p>
+        <p>text:{{ a.text }}</p>
+        <p>created_date: {{ a.created_date }}</p>
+        <p>author_id: {{author_id}}</p>
+        
+        
+    </div>
+    {% endfor %}
+{% endblock %}

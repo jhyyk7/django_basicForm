@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        {% if whyup.published_date %}
+            <div>
+                {{ whyup.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ whyup.title }}</h1>
+        <p>{{ whyup.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
